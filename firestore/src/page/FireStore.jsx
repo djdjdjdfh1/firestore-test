@@ -35,6 +35,7 @@ export default function FireStore() {
             const docRef = await addDoc(collection(db, "test"), {
               title,
               writer,
+              done,
               startDate: Timestamp.fromDate(new Date())
             });
             console.log("Document written with ID: ", docRef.id);
